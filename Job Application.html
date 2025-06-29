@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Form</title>
+  <link rel="stylesheet" href="./Job Application.css">
+</head>
+<body>
+  <form id="employeeForm">
+    <div class="section">
+      <h2>Basic Details</h2>
+      <label>First Name:</label><input type="text" name="firstName"><br>
+      <label>Last Name:</label><input type="text" name="lastName"><br>
+      <label>Designation:</label><input type="text" name="designation"><br>
+      <label>Address 1:</label><input type="text" name="address1"><br>
+      <label>Email:</label><input type="email" name="email"><br>
+      <label>Phone:</label><input type="tel" name="phone"><br>
+      <label>City:</label><input type="text" name="city"><br>
+      <label>State:</label>
+      <select name="state">
+        <option>Rajasthan</option>
+        <option>Gujarat</option>
+        <option>Maharashtra</option>
+        <option>Jammu & Kashmir</option>
+      </select><br>
+      <div class="field-row">
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Others"> Others</label>
+        </div>
+    </div>
+      <label>Zip Code:</label><input type="text" name="zipcode"><br>
+      <label>Relationship Status:</label>
+      <select name="relationship">
+        <option>Single</option>
+        <option>Married</option>
+      </select><br>
+      <label>DOB:</label><input type="date" name="dob"><br>
+    </div>
+
+    <div class="section">
+      <h2>Education Details</h2>
+      <div id="educationContainer"></div>
+      <button type="button" onclick="addEducation()">Add Education</button>
+    </div>
+
+    <div class="section">
+      <h2>Work Experience</h2>
+      <div id="workContainer"></div>
+      <button type="button" onclick="addWork()">Add Work</button>
+    </div>
+
+    <div class="section">
+      <h2>Languages Known</h2>
+      <div class="checkbox-group">
+        <label>Hindi:</label>
+        <label><input type="checkbox" name="hindiRead"> Read</label>
+        <label><input type="checkbox" name="hindiWrite"> Write</label>
+        <label><input type="checkbox" name="hindiSpeak"> Speak</label>
+      </div>
+      <div class="checkbox-group">
+        <label>English:</label>
+        <label><input type="checkbox" name="englishRead"> Read</label>
+        <label><input type="checkbox" name="englishWrite"> Write</label>
+        <label><input type="checkbox" name="englishSpeak"> Speak</label>
+      </div>
+      <div class="checkbox-group">
+        <label>Gujarati:</label>
+        <label><input type="checkbox" name="gujaratiRead"> Read</label>
+        <label><input type="checkbox" name="gujaratiWrite"> Write</label>
+        <label><input type="checkbox" name="gujaratiSpeak"> Speak</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Technologies Known</h2>
+      <div class="radio-group">
+        <label>HTML:</label>
+        <label><input type="radio" name="htmlLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="htmlLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="htmlLevel" value="Expert"> Expert</label>
+      </div>
+      <div class="radio-group">
+        <label>Javascript:</label>
+        <label><input type="radio" name="javascriptLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="javascriptLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="javascriptLevel" value="Expert"> Expert</label>
+      </div>
+      <div class="radio-group">
+        <label>MySQL:</label>
+        <label><input type="radio" name="mysqlLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="mysqlLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="mysqlLevel" value="Expert"> Expert</label>
+      </div>
+      <div class="radio-group">
+        <label>Php:</label>
+        <label><input type="radio" name="phpLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="phpLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="phpLevel" value="Expert"> Expert</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Reference Contact</h2>
+      <div id="referenceContainer"></div>
+      <button type="button" onclick="addReference()">Add Reference</button>
+    </div>
+
+    <div class="section">
+      <h2>Preferences</h2>
+      <label>Preferred Location:</label><input type="text" name="location" value="Ahmedabad"><br>
+      <label>Notice Period:</label><input type="text" name="notice"><br>
+      <label>Expected CTC:</label><input type="text" name="expected"><br>
+      <label>Current CTC:</label><input type="text" name="current"><br>
+      <label>Department:</label>
+      <select name="department">
+        <option>Development</option>
+        <option>HR</option>
+        <option>Sales</option>
+      </select><br><br>
+      <button type="submit">Submit Form</button>
+      <button type="reset">Reset Form</button>
+    </div>
+  </form>
+
+  <script src="./Job Application.js"></script>
+</body>
+</html>
