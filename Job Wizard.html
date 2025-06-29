@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application Wizard</title>
+  <link rel="stylesheet" href="./Job wizard.css">
+</head>
+<body>
+  <form id="employeeForm">
+    <div class="step active">
+      <h2>Basic Details</h2>
+      <label>First Name:</label><input type="text" name="firstName" required>
+      <label>Last Name:</label><input type="text" name="lastName" required>
+      <label>Designation:</label><input type="text" name="designation" required>
+      <label>Address 1:</label><input type="text" name="address1" required>
+      <label>Email:</label><input type="email" name="email" required>
+      <label>Phone:</label><input type="tel" name="phone" required>
+      <label>City:</label><input type="text" name="city" required>
+      <label>State:</label>
+      <select name="state" required>
+        <option>Rajasthan</option>
+        <option>Gujarat</option>
+        <option>Maharashtra</option>
+        <option>Jammu & Kashmir</option>
+      </select>
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Others"> Others</label>
+      <label>Zip Code:</label><input type="text" name="zipcode" required>
+      <label>Relationship Status:</label>
+      <select name="relationship" required>
+        <option>Single</option>
+        <option>Married</option>
+      </select>
+      <label>DOB:</label><input type="date" name="dob" required>
+    </div>
+
+    <div class="step">
+      <h2>Education Details</h2>
+      <div id="educationContainer"></div>
+      <button type="button" onclick="addEducation()">Add Education</button>
+    </div>
+
+    <div class="step">
+      <h2>Work Experience</h2>
+      <div id="workContainer"></div>
+      <button type="button" onclick="addWork()">Add Work</button>
+    </div>
+
+    <div class="step">
+      <h2>Languages Known</h2>
+      <div class="checkbox-group">
+        <label>Hindi:</label>
+        <label><input type="checkbox" name="hindiRead"> Read</label>
+        <label><input type="checkbox" name="hindiWrite"> Write</label>
+        <label><input type="checkbox" name="hindiSpeak"> Speak</label>
+      </div>
+      <div class="checkbox-group">
+        <label>English:</label>
+        <label><input type="checkbox" name="englishRead"> Read</label>
+        <label><input type="checkbox" name="englishWrite"> Write</label>
+        <label><input type="checkbox" name="englishSpeak"> Speak</label>
+      </div>
+      <div class="checkbox-group">
+        <label>Gujarati:</label>
+        <label><input type="checkbox" name="gujaratiRead"> Read</label>
+        <label><input type="checkbox" name="gujaratiWrite"> Write</label>
+        <label><input type="checkbox" name="gujaratiSpeak"> Speak</label>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Technologies Known</h2>
+      <div class="radio-group">
+        <label>HTML:</label>
+        <label><input type="radio" name="htmlLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="htmlLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="htmlLevel" value="Expert"> Expert</label>
+      </div>
+      <div class="radio-group">
+        <label>Javascript:</label>
+        <label><input type="radio" name="javascriptLevel" value="Beginner"> Beginner</label>
+        <label><input type="radio" name="javascriptLevel" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="javascriptLevel" value="Expert"> Expert</label>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Reference Contact</h2>
+      <div id="referenceContainer"></div>
+      <button type="button" onclick="addReference()">Add Reference</button>
+    </div>
+
+    <div class="step">
+      <h2>Preferences</h2>
+      <label>Preferred Location:</label><input type="text" name="location" value="Ahmedabad" required>
+      <label>Notice Period:</label><input type="text" name="notice" required>
+      <label>Expected CTC:</label><input type="text" name="expected" required>
+      <label>Current CTC:</label><input type="text" name="current" required>
+      <label>Department:</label>
+      <select name="department" required>
+        <option>Development</option>
+        <option>HR</option>
+        <option>Sales</option>
+      </select>
+    </div>
+
+    <div class="navigation-buttons">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="submit" id="submitBtn" style="display:none;">Submit</button>
+    </div>
+  </form>
+  <script src="./Job Wizard.js"></script>
+</body>
+</html>
